@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condo Hub & Server Directory</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        /* Background Grid Pattern */
+        .bg-grid {
+            background-image: 
+                linear-gradient(to right, rgba(124, 58, 237, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(124, 58, 237, 0.05) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+    </style>
+</head>
+<body class="bg-[#090514] text-slate-100 min-h-screen flex flex-col bg-grid selection:bg-purple-600 selection:text-white">
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="border-b border-purple-950/60 backdrop-blur-md bg-[#090514]/80 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-18 flex items-center justify-between py-4">
+            <!-- Logo & Title -->
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-purple-600/20 border border-purple-500/30 flex items-center justify-center text-purple-400 shadow-lg shadow-purple-900/20">
+                    <i class="fa-solid fa-gamepad text-lg"></i>
+                </div>
+                <span class="font-extrabold text-lg tracking-wider text-white">CONDO HUB</span>
+            </div>
+
+            <!-- Status Badge & Live Stats -->
+            <div class="flex items-center space-x-3">
+                <!-- Statistik Counter -->
+                <div class="hidden md:flex items-center space-x-3 px-4 py-1.5 rounded-full bg-purple-950/40 border border-purple-800/40 text-xs font-medium text-purple-300 shadow-inner">
+                    <span class="flex items-center gap-1.5">
+                        <i class="fa-solid fa-users text-purple-400"></i> Online: <span class="text-white font-bold">234</span>
+                    </span>
+                    <span class="text-purple-800">|</span>
+                    <span class="flex items-center gap-1.5">
+                        <i class="fa-solid fa-user-plus text-emerald-400"></i> Total Join: <span class="text-white font-bold">178</span>
+                    </span>
+                </div>
+
+                <!-- System Online Badge -->
+                <div class="flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-purple-950/50 border border-purple-800/50 text-xs font-semibold text-purple-300 shadow-inner">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>System Online</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="flex-grow max-w-7xl mx-auto px-6 py-10 w-full space-y-16">
+
+        <!-- Hero Section -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <!-- Left Info -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-purple-950/60 border border-purple-800/40 text-purple-300 text-xs font-semibold">
+                    <i class="fa-solid fa-sparkles text-[10px]"></i>
+                    <span>OFFICIAL SERVER HUB</span>
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                    Welcome To <br/>
+                    <span class="bg-gradient-to-r from-purple-400 via-fuchsia-400 to-pink-400 bg-clip-text text-transparent">Condo Hub</span>
+                </h1>
+                <p class="text-slate-400 text-sm sm:text-base max-w-xl leading-relaxed">
+                    Choose your favorite server and start playing with other players. This system is synchronized in real-time with the condo server.
+                </p>
+                <div class="flex items-center space-x-6 text-xs text-slate-400 pt-2">
+                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-dot text-purple-400"></i> Live player counts</span>
+                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-rotate text-purple-400"></i> Updated automatically</span>
+                </div>
+            </div>
+
+            <!-- Right Preview Card (Live Video Section) -->
+            <div class="lg:col-span-5">
+                <div class="p-3 rounded-2xl bg-purple-950/30 border border-purple-800/40 backdrop-blur-xl shadow-2xl relative group">
+                    <div class="absolute top-5 left-5 z-10 flex items-center gap-2">
+                        <span class="px-2.5 py-1 rounded-md bg-rose-600 text-white text-[10px] font-bold tracking-wider uppercase flex items-center gap-1 shadow">
+                            <span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span> LIVE
+                        </span>
+                    </div>
+                    <div class="overflow-hidden rounded-xl aspect-video bg-slate-900 border border-purple-900/50">
+                        <!-- Video Live Preview -->
+                        <video src="video.mp4" autoplay muted loop playsinline class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></video>
+                    </div>
+                    <div class="mt-3 px-2 flex items-center justify-between">
+                        <div>
+                            <h3 class="text-sm font-bold text-white">Condo Hub</h3>
+                            <p class="text-xs text-slate-400">Community server network</p>
+                        </div>
+                        <span class="text-xs text-purple-400 font-mono">discord.gg/roblox</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servers Section -->
+        <section class="space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-purple-950/80 pb-4">
+                <div>
+                    <h2 class="text-2xl font-bold tracking-tight text-white">Choose <span class="text-purple-400">Server</span></h2>
+                    <p class="text-xs text-slate-400 mt-1">Players go up and down dynamically. Choose the quietest one for the best performance!</p>
+                </div>
+                <div class="self-start sm:self-auto px-3.5 py-1.5 rounded-lg bg-purple-950/40 border border-purple-800/40 text-xs font-semibold text-purple-300 flex items-center gap-2">
+                    <i class="fa-solid fa-server"></i>
+                    <span>5 Active Servers</span>
+                </div>
+            </div>
+
+            <!-- Server Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- SERVER 1 (AVAILABLE) -->
+                <div class="p-4 rounded-2xl bg-purple-950/25 border border-purple-900/40 hover:border-purple-600/60 transition-all duration-300 flex flex-col justify-between space-y-4 shadow-xl">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-bold text-sm text-white">Condo 1</h3>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">● AVAILABLE</span>
+                        </div>
+                        <div class="relative aspect-video rounded-xl overflow-hidden bg-slate-900 border border-purple-900/30">
+                            <img src="fqD942zw3DQcHncszLLV5L-1200-80.jpg" alt="Condo 1" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex items-center justify-between text-xs">
+                            <span class="text-slate-300 font-medium">18 / 30 Players</span>
+                            <div class="flex -space-x-2 overflow-hidden">
+                                <img class="inline-block h-6 w-6 rounded-full ring-2 ring-[#090514] object-cover" src="images.jpg" alt="User">
+                                <img class="inline-block h-6 w-6 rounded-full ring-2 ring-[#090514] object-cover" src="cff4de254689176b235d3043718a6f14.jpg" alt="User">
+                                <img class="inline-block h-6 w-6 rounded-full ring-2 ring-[#090514] object-cover" src="1becbbc4302e9dc2eece586334bf4ceb.jpg" alt="User">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="w-full bg-purple-950 rounded-full h-2 overflow-hidden border border-purple-900/50">
+                                <div class="bg-gradient-to-r from-purple-500 to-indigo-500 h-2 rounded-full" style="width: 60%"></div>
+                            </div>
+                            <div class="flex justify-end text-[10px] text-slate-500 font-mono">60%</div>
+                        </div>
+                    </div>
+                    <div class="space-y-2 pt-2 border-t border-purple-950/60">
+                        <a href="#" target="_blank" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-xs flex items-center justify-center space-x-2 shadow-lg shadow-purple-900/30 transition">
+                            <span>JOIN SERVER</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                        <p class="text-center text-[10px] text-slate-600 font-mono">ID: 8702 - 8941</p>
+                    </div>
+                </div>
+
+                <!-- SERVER 2 (AVAILABLE) -->
+                <div class="p-4 rounded-2xl bg-purple-950/25 border border-purple-900/40 hover:border-purple-600/60 transition-all duration-300 flex flex-col justify-between space-y-4 shadow-xl">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-bold text-sm text-white">Condo 2</h3>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">● AVAILABLE</span>
+                        </div>
+                        <div class="relative aspect-video rounded-xl overflow-hidden bg-slate-900 border border-purple-900/30">
+                            <img src="34df33e33bdaee95e13287ac70cf7c35.jpg" alt="Condo 2" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex items-center justify-between text-xs">
+                            <span class="text-slate-300 font-medium">12 / 30 Players</span>
+                            <div class="flex -space-x-2 overflow-hidden">
+                                <img class="inline-block h-6 w-6 rounded-full ring-2 ring-[#090514] object-cover" src="cc0907b40ef62c6a3861eb21e123b1fe.jpg" alt="User">
+                                <img class="inline-block h-6 w-6 rounded-full ring-2 ring-[#090514] object-cover" src="0c5ed41eb6d1dcd7d746333496077155.jpg" alt="User">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="w-full bg-purple-950 rounded-full h-2 overflow-hidden border border-purple-900/50">
+                                <div class="bg-gradient-to-r from-purple-500 to-indigo-500 h-2 rounded-full" style="width: 40%"></div>
+                            </div>
+                            <div class="flex justify-end text-[10px] text-slate-500 font-mono">40%</div>
+                        </div>
+                    </div>
+                    <div class="space-y-2 pt-2 border-t border-purple-950/60">
+                        <a href="#" target="_blank" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-xs flex items-center justify-center space-x-2 shadow-lg shadow-purple-900/30 transition">
+                            <span>JOIN SERVER</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                        <p class="text-center text-[10px] text-slate-600 font-mono">ID: 358X - 2457</p>
+                    </div>
+                </div>
+
+                <!-- SERVER 3 (AVAILABLE) -->
+                <div class="p-4 rounded-2xl bg-purple-950/25 border border-purple-900/40 hover:border-purple-600/60 transition-all duration-300 flex flex-col justify-between space-y-4 shadow-xl">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-bold text-sm text-white">Condo 3</h3>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">● AVAILABLE</span>
+                        </div>
+                        <div class="relative aspect-video rounded-xl overflow-hidden bg-slate-900 border border-purple-900/30">
+                            <img src="hqdefault.jpg" alt="Condo 3" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex items-center justify-between text-xs">
+                            <span class="text-slate-300 font-medium">19 / 30 Players</span>
+                            <div class="flex -space-x-2 overflow-hidden">
+                                <img class="inline-block h-6 w-6 rounded-full ring-2 ring-[#090514] object-cover" src="e3538f6efc30f0fc3fb61834b7cdf8ca.jpg" alt="User">
+                                <img class="inline-block h-6 w-6 rounded-full ring-2 ring-[#090514] object-cover" src="56b22a42137efbaa50835c7f9861e72e.jpg" alt="User">
+                                <img class="inline-block h-6 w-6 rounded-full ring-2 ring-[#090514] object-cover" src="images (1).jpg" alt="User">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="w-full bg-purple-950 rounded-full h-2 overflow-hidden border border-purple-900/50">
+                                <div class="bg-gradient-to-r from-purple-500 to-indigo-500 h-2 rounded-full" style="width: 63%"></div>
+                            </div>
+                            <div class="flex justify-end text-[10px] text-slate-500 font-mono">63%</div>
+                        </div>
+                    </div>
+                    <div class="space-y-2 pt-2 border-t border-purple-950/60">
+                        <a href="#" target="_blank" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-xs flex items-center justify-center space-x-2 shadow-lg shadow-purple-900/30 transition">
+                            <span>JOIN SERVER</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                        <p class="text-center text-[10px] text-slate-600 font-mono">ID: 444X - 596X</p>
+                    </div>
+                </div>
+
+                <!-- SERVER 4 (FULL) -->
+                <div class="p-4 rounded-2xl bg-purple-950/25 border border-rose-950/60 transition-all duration-300 flex flex-col justify-between space-y-4 shadow-xl opacity-90">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-bold text-sm text-white">Condo 4</h3>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-rose-500/10 text-rose-400 border border-rose-500/20">● FULL</span>
+                        </div>
+                        <div class="relative aspect-video rounded-xl overflow-hidden bg-slate-900 border border-purple-900/30">
+                            <img src="73fc21f76613a269fc02b3b6648a5b8a.jpg" alt="Condo 4" class="w-full h-full object-cover grayscale">
+                        </div>
+                        <div class="flex items-center justify-between text-xs">
+                            <span class="text-rose-300 font-medium">30 / 30 Players</span>
+                            <div class="flex -space-x-2 overflow-hidden">
+                                <img class="inline-block h-6 w-6 rounded-full ring-2 ring-[#090514] object-cover" src="1becbbc4302e9dc2eece586334bf4ceb.jpg" alt="User">
+                                <img class="inline-block h-6 w-6 rounded-full ring-2 ring-[#090514] object-cover" src="cff4de254689176b235d3043718a6f14.jpg" alt="User">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="w-full bg-purple-950 rounded-full h-2 overflow-hidden border border-purple-900/50">
+                                <div class="bg-rose-600 h-2 rounded-full" style="width: 100%"></div>
+                            </div>
+                            <div class="flex justify-end text-[10px] text-rose-400 font-mono">100% (Full)</div>
+                        </div>
+                    </div>
+                    <div class="space-y-2 pt-2 border-t border-purple-950/60">
+                        <button disabled class="w-full py-2.5 rounded-xl bg-slate-800 text-slate-500 font-bold text-xs flex items-center justify-center space-x-2 cursor-not-allowed">
+                            <span>SERVER FULL</span>
+                            <i class="fa-solid fa-lock text-[10px]"></i>
+                        </button>
+                        <p class="text-center text-[10px] text-slate-600 font-mono">ID: 994X - 28X7</p>
+                    </div>
+                </div>
+
+                <!-- SERVER 5 (FULL) -->
+                <div class="p-4 rounded-2xl bg-purple-950/25 border border-rose-950/60 transition-all duration-300 flex flex-col justify-between space-y-4 shadow-xl opacity-90">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-bold text-sm text-white">Condo 5</h3>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-rose-500/10 text-rose-400 border border-rose-500/20">● FULL</span>
+                        </div>
+                        <div class="relative aspect-video rounded-xl overflow-hidden bg-slate-900 border border-purple-900/30">
+                            <img src="images (2).jpg" alt="Condo 5" class="w-full h-full object-cover grayscale">
+                        </div>
+                        <div class="flex items-center justify-between text-xs">
+                            <span class="text-rose-300 font-medium">30 / 30 Players</span>
+                            <div class="flex -space-x-2 overflow-hidden">
+                                <img class="inline-block h-6 w-6 rounded-full ring-2 ring-[#090514] object-cover" src="cc0907b40ef62c6a3861eb21e123b1fe.jpg" alt="User">
+                                <img class="inline-block h-6 w-6 rounded-full ring-2 ring-[#090514] object-cover" src="e3538f6efc30f0fc3fb61834b7cdf8ca.jpg" alt="User">
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="w-full bg-purple-950 rounded-full h-2 overflow-hidden border border-purple-900/50">
+                                <div class="bg-rose-600 h-2 rounded-full" style="width: 100%"></div>
+                            </div>
+                            <div class="flex justify-end text-[10px] text-rose-400 font-mono">100% (Full)</div>
+                        </div>
+                    </div>
+                    <div class="space-y-2 pt-2 border-t border-purple-950/60">
+                        <button disabled class="w-full py-2.5 rounded-xl bg-slate-800 text-slate-500 font-bold text-xs flex items-center justify-center space-x-2 cursor-not-allowed">
+                            <span>SERVER FULL</span>
+                            <i class="fa-solid fa-lock text-[10px]"></i>
+                        </button>
+                        <p class="text-center text-[10px] text-slate-600 font-mono">ID: 6702 - 8941</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="border-t border-purple-950/60 py-8 text-center text-xs text-slate-500 space-y-1 mt-12 bg-[#090514]">
+        <p>&copy; 2026 Condo Hub. All rights reserved.</p>
+        <p class="text-slate-600">Built for the community</p>
+    </footer>
+
+</body>
+</html>
